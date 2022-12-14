@@ -26,7 +26,7 @@ body {
 /* score-card end */
 .title {
   text-align: center;
-  margin: 30px 20px;
+  margin: 50px;
 }
 /* play board */
 
@@ -48,12 +48,7 @@ body {
   cursor: pointer;
   background-color: transparent;
 }
-.grid-item:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  transition: 0.5s ease;
-}
+
 .placed-x {
   box-shadow: 1px 1px 5px rgb(72, 252, 132);
   background-color: rgb(248, 246, 246);
@@ -61,12 +56,6 @@ body {
   color: rgb(10, 232, 14);
   transform: scale(0.9);
 }
-.placed-x:hover {
-  cursor: no-drop;
-  color: rgb(10, 232, 14);
-  background-color: transparent;
-}
-
 .placed-0 {
   box-shadow: 1px 1px 10px rgb(253, 11, 3);
   background-color: rgb(248, 246, 246);
@@ -74,11 +63,7 @@ body {
   color: rgb(249, 40, 7);
   transform: scale(0.9);
 }
-.placed-0:hover {
-  cursor: no-drop;
-  color: rgb(249, 40, 7);
-  background-color: transparent;
-}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -93,11 +78,6 @@ body {
   border-radius: 5px;
   border: 1px solid;
   background-color: transparent;
-}
-.btn:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
 }
 
 .d-none {
@@ -119,13 +99,31 @@ body {
   font-weight: 600;
   z-index: 1;
 }
-.result:hover {
-  background-color: rgb(12, 245, 36);
-  color: black;
-}
 
 .mark {
   background-color: rgba(0, 0, 0, 0.993);
   box-shadow: 0 0 10px rgb(249, 249, 249);
   border: 1px solid rgb(17, 0, 255);
+}
+@media screen and (min-width: 700px) {
+  .grid-item:hover {
+    box-shadow: 1px 1px 10px white;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .placed-x:hover {
+    cursor: no-drop;
+  }
+  .placed-0:hover {
+    cursor: no-drop;
+  }
+  .btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  .result:hover {
+    background-color: rgb(12, 245, 36);
+    color: black;
+  }
 }
