@@ -72,7 +72,8 @@ function gameOver(symbol) {
   isGameStarted = false;
   message.textContent = "Game Over";
   const score = getScore(symbol);
-  saveScore(symbol, score);
+  saveScore(symbol, score + 10);
+  restartButton.textContent = "Play Again";
 }
 function checking(symbol, a, b, c) {
   const x = data[a].mark;
@@ -191,7 +192,7 @@ function addGridBoxes() {
 }
 addGridBoxes();
 function saveScore(symbol, score) {
-  localStorage.setItem(symbol, JSON.stringify(score + 10));
+  localStorage.setItem(symbol, JSON.stringify(score));
   const newScore = localStorage.getItem(symbol);
   getScore(symbol);
   return newScore;
